@@ -34,6 +34,9 @@ android {
     compileSdkVersion 28
     buildToolsVersion "28.0.2"
 
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
     //设置一个缺省打包，必须(维度的意思)
     flavorDimensions "default"
     //分渠道打包
