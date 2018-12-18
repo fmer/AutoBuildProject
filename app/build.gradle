@@ -34,8 +34,6 @@ android {
     compileSdkVersion 28
     buildToolsVersion "28.0.2"
 
-
-
     //设置一个缺省打包，必须(维度的意思)
     flavorDimensions "default"
     //分渠道打包
@@ -90,9 +88,6 @@ android {
         signingConfigs {
             //导入release配置信息
             release {
-                aaptOptions.cruncherEnabled = false
-                aaptOptions.useNewCruncher = false
-
                 def storeFile_str = props['AutoGradleDemo.storeFile']
                 def keyAlias_str = props['AutoGradleDemo.keyAlias']
                 def keyPassword_str = props['AutoGradleDemo.keyPassword']
@@ -115,9 +110,6 @@ android {
             }
             //debug签名配置在mould下全局gradle.properties
             debug {
-                aaptOptions.cruncherEnabled = false
-                aaptOptions.useNewCruncher = false
-
                 storeFile file(project['AutoGradleDemo.debugStorePath'])
                 storePassword project['AutoGradleDemo.debugStorePassword']
                 keyAlias project['AutoGradleDemo.debugKeyAlias']
