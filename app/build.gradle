@@ -65,7 +65,7 @@ android {
 
         defaultConfig {
             applicationId "com.auto.gradle"
-            minSdkVersion 18
+            minSdkVersion 19
             targetSdkVersion 28
             versionCode props['AutoGradleDemo.versionCode'].toInteger()
             versionName props['AutoGradleDemo.versionName']
